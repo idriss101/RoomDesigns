@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function HeroText() {
   return (
-    <div className="mx-auto w-5/6 mt-12 pb-20">
+    <div className="mx-auto w-5/6 mt-12 pb-20 lg:w-3/6 lg:p-24 lg:flex lg:flex-col lg:items-center lg:justify-center">
       <h1 className="text-3xl font-bold mb-5">
         Discover innovative ways to decorate
       </h1>
