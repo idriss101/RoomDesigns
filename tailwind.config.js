@@ -9,6 +9,9 @@ module.exports = {
       letterSpacing: {
         widest: ".7rem",
       },
+      inset: {
+        "-28": "-7.2rem",
+      },
     },
   },
   variants: {
