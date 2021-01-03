@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { useMediaQuery } from "react-responsive";
-export default function HeroImage() {
+export default function HeroImage(props) {
   let isDesktop;
   if (typeof window !== "undefined") {
     isDesktop = window.matchMedia("(min-width:1024px)").matches;
@@ -17,7 +16,7 @@ export default function HeroImage() {
         //   objectFit="cover"
         // />
         <img
-          src="/images/desktop-image-hero-1.jpg"
+          src={`/images/desktop-image-hero-${props.heroContent.image}.jpg`}
           alt="main hero picture"
           className="w-full h-full object-cover object-top"
         />
@@ -32,7 +31,7 @@ export default function HeroImage() {
         //   layout="responsive"
         // />
         <img
-          src="/images/mobile-image-hero-1.jpg"
+          src={`/images/mobile-image-hero-${props.heroContent.image}.jpg`}
           alt="main hero picture"
           className="w-screen h-full object-fill object-top"
         />
@@ -77,7 +76,10 @@ export default function HeroImage() {
       <div className="w-full h-full">{showImage()}</div>
 
       <div className="flex flex-row absolute right-0 bottom-0 lg:-right-28 ">
-        <span className="bg-black py-4 px-6 flex flex-col items-center justify-center transition-all hover:bg-gray-500 cursor-pointer">
+        <span
+          className="bg-black py-4 px-6 flex flex-col items-center justify-center transition-all hover:bg-gray-500 cursor-pointer"
+          onClick={props.prevContent}
+        >
           <Image
             src="/images/icon-angle-left.svg"
             alt="left arrow"
@@ -85,7 +87,10 @@ export default function HeroImage() {
             height={20}
           />
         </span>
-        <span className="bg-black py-4 px-6 flex flex-col items-center justify-center transition-all hover:bg-gray-500 cursor-pointer">
+        <span
+          className="bg-black py-4 px-6 flex flex-col items-center justify-center transition-all hover:bg-gray-500 cursor-pointer"
+          onClick={props.nextContent}
+        >
           <Image
             src="/images/icon-angle-right.svg"
             alt="left arrow"
