@@ -44,12 +44,13 @@ export default function HeroImage() {
     if (isDesktop === true) {
       return (
         <>
-          <Image src="/images/logo.svg" alt="logo" width={70} height={20} />
+          {/* <Image src="/images/logo.svg" alt="logo" width={100} height={20} /> */}
+          <img src="/images/logo.svg" alt="logo" className="w-18 h-5" />
           <ul>
-            <li>home</li>
-            <li>shop</li>
-            <li>about</li>
-            <li>contact</li>
+            <li className="text-white inline-block text-2xl mr-10">home</li>
+            <li className="text-white inline-block text-2xl mr-10">shop</li>
+            <li className="text-white inline-block text-2xl mr-10">about</li>
+            <li className="text-white inline-block text-2xl ">contact</li>
           </ul>
         </>
       );
@@ -70,12 +71,12 @@ export default function HeroImage() {
 
   return (
     <div className=" w-full relative z-0 lg:w-5/6 lg:h-full">
-      <div className="absolute z-10 top-10 w-4/6 text-center flex justify-around">
+      <div className="absolute z-10 top-10 w-5/6 text-center flex justify-around lg:items-center">
         {menuLayout()}
       </div>
       <div className="w-full h-full">{showImage()}</div>
 
-      <div className="flex flex-row absolute -right-28 bottom-0">
+      <div className="flex flex-row absolute right-0 bottom-0 lg:-right-28 ">
         <span className="bg-black py-4 px-6 flex flex-col items-center justify-center transition-all hover:bg-gray-500 cursor-pointer">
           <Image
             src="/images/icon-angle-left.svg"

@@ -3,7 +3,7 @@ import Image from "next/Image";
 
 export default function About() {
   return (
-    <div className="w-screen flex flex-col">
+    <div className="w-screen flex flex-col lg:grid lg:grid-cols-3">
       <Image
         src="/images/image-about-dark.jpg"
         alt="hero image 2"
@@ -11,7 +11,7 @@ export default function About() {
         height={300}
         layout="responsive"
       />
-      <div className="mx-auto w-5/6 mt-12 pb-7">
+      <div className="mx-auto w-5/6 mt-12 pb-7 lg:flex lg:flex-col lg:justify-center lg:mt-0">
         <h2 className="text-lg uppercase font-bold tracking-wider mb-5">
           About our furniture
         </h2>
