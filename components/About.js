@@ -3,7 +3,7 @@ import Image from "next/Image";
 
 export default function About() {
   return (
-    <div className="w-screen flex flex-col lg:grid lg:grid-cols-3">
+    <div className="w-screen flex flex-col lg:grid lg:grid-cols-3 lg:grid-rows-1 lg:h-2/6">
       <Image
         src="/images/image-about-dark.jpg"
         alt="hero image 2"
